@@ -201,8 +201,8 @@ app.post("/generate-project", async (req, res) => {
     const uuid = uuidv4();
     const timestamp = Date.now();
     const basePath = `projects/${stack}-${version}-${timestamp}-${uuid}`;
-    const zipPath = `${basePath}/project.zip`;
-    const pdfPath = `${basePath}/project.pdf`;
+    const zipPath = `${basePath}/codebase.zip`;
+    const pdfPath = `${basePath}/mini-doc.pdf`;
 
     console.log("⬇️ Downloading dummy files from Google Drive...");
     const zipBuffer = await downloadFile(
